@@ -1,9 +1,9 @@
 variable "instancepub" {
-	default = "1"
+	default = "3"
 }
 
 variable "instancepriv" {
-	default = "1"
+	default = "3"
 }
 variable "ami" {
 	default = "ami-a61243ca"
