@@ -1,0 +1,5 @@
+emersonramos:
+  image: eramos/emersonramos
+  restart: always
+  ports:
+    - 80:80
