@@ -19,7 +19,7 @@ onde:
 Opções:
 
 - init: Este comando é usado para iniciar o working directory que contém os arquivos de configuração do Terraform
-- plan:Este comando faz uma verificação do código e determina quais ações são necessárias para atingir o estado desejado nos arquivos de configurações.
+- plan: Este comando faz uma verificação do código e determina quais ações são necessárias para atingir o estado desejado nos arquivos de configurações.
 - apply: Este comando é utilizado para aplicar as configurações.
 
 Utilize os comandos abaixo para iniciar a VPC na AWS
@@ -27,7 +27,7 @@ Utilize os comandos abaixo para iniciar a VPC na AWS
 - ./deploy.sh aws_vpc init
 
 - ./deploy.sh aws_vpc plan
-
+ 
 - ./deploy.sh aws_vpc apply
 
 Utilize os comandos abaixo para criação da chave ssh
