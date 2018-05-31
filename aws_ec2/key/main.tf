@@ -7,6 +7,6 @@ data "terraform_remote_state" "vpc" {
 }
 resource "null_resource" "key-create" {
   provisioner "local-exec" {
-    command = "ssh-keygen -b 4096 -t rsa -N '' -C estabilis -f estabilis.pem"
+    command = "ssh-keygen -b 4096 -t rsa -N '' -C sslkey -f sslkey.pem"
   }
 }
