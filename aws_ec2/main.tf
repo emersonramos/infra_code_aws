@@ -8,7 +8,7 @@ data "terraform_remote_state" "vpc" {
 
 resource "aws_key_pair" "key-public" {
   key_name = "${var.key}"
-  public_key = "${file("key/estabilis.pem.pub")}"
+  public_key = "${file("key/sslkey.pem.pub")}"
 }
 
 resource "aws_security_group" "ec2" {
@@ -48,7 +48,7 @@ resource "aws_security_group" "ec2" {
   }
 }
 
-resource "aws_instance" "estabilis_pub" {
+resource "aws_instance" "network_pub" {
   count = "${var.instancepub}"
   subnet_id = "${element(data.terraform_remote_state.vpc.public_subnets, count.index)}"
   instance_type = "${var.type}"
@@ -69,7 +69,7 @@ resource "aws_instance" "estabilis_pub" {
   provisioner "remote-exec" {
     connection {
       user = "${var.ssh_user_name}"
-      private_key = "${file("key/estabilis.pem")}"
+      private_key = "${file("key/sslkey.pem")}"
     }
 
     inline = [
@@ -78,7 +78,7 @@ resource "aws_instance" "estabilis_pub" {
   }
 }
 
-resource "aws_instance" "estabilis_priv" {
+resource "aws_instance" "network_priv" {
   count = "${var.instancepriv}"
   subnet_id = "${element(data.terraform_remote_state.vpc.private_subnets, count.index)}"
   instance_type = "${var.type}"
@@ -99,7 +99,7 @@ resource "aws_instance" "estabilis_priv" {
   provisioner "remote-exec" {
     connection {
       user = "${var.ssh_user_name}"
-      private_key = "${file("key/estabilis.pem")}"
+      private_key = "${file("key/sslkey.pem")}"
     }
   }
 }
