@@ -1,4 +1,4 @@
-# TESTE ESTABILIS
+# INFRA
 
 O projeto deve ser iniciado pelo arquivo deploy.sh.
 
