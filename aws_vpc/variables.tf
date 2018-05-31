@@ -1,5 +1,5 @@
 variable "name" {
-  default = "teste-estabilis"
+  default = "infra_code"
 }
 
 variable "cidr" {

@@ -1,7 +1,7 @@
 output "public_ip_address" {
-  value = "${aws_instance.estabilis_pub.*.id}"
+  value = "${aws_instance.network_pub.*.id}"
 }
 
 output "private_ip_address" {
-  value = "${aws_instance.estabilis_priv.*.id}"
+  value = "${aws_instance.network_priv.*.id}"
 }

@@ -19,11 +19,11 @@ variable "ami_id" {
   default = "ami-a61243ca"
 }
 variable "sg_name" {
-  default = "teste_estabilis"
+  default = "infra_code"
 }
 
 variable "key" {
-  default = "estabilis"
+  default = "sslkey"
 }
 
 variable "type_disk_so" {
@@ -35,7 +35,7 @@ variable "size_so" {
 }
 
 variable "tag" {
-  default = "teste_estabilis"
+  default = "infra_code"
 }
 variable "ssh_user_name" {
   default = "admin"
